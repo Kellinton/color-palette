@@ -1,12 +1,13 @@
-const btn = document.getElementById('gerar');
+const gerarCores = document.getElementById('gerar');
 const coresDiv = [...document.getElementsByClassName('cor')];
 const textosDiv = [...document.getElementsByClassName('texto')];
 
 
-btn.addEventListener('click', () => {
-    let contador = 0;
+gerarCores.addEventListener('click', () => {
+
     coresDiv.forEach(cor => {
 
+        console.log(cor.lastElementChild);
         const caracteres = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
         let corGerada = [];
     
@@ -16,11 +17,16 @@ btn.addEventListener('click', () => {
             corGerada.push(caracteres[numeroSorteado]);
         }
 
-        textosDiv[contador].innerHTML = `#${corGerada.join('')}`;
+        cor.lastElementChild.innerHTML = `#${corGerada.join('')}`;
         cor.style.backgroundColor = `#${corGerada.join('')}`;
-
-        contador++;
-
+  
     });
 
 })
+
+function bloquearDiv(event){
+
+    event.target.classList.toggle('ri-lock-unlock-fill');
+    event.target.classList.toggle('ri-lock-fill');
+
+}
