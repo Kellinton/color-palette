@@ -1,110 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Generator</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Palette</title>
 
-    <link rel="stylesheet" href="./src/css/output.css">
+        <link rel="stylesheet" href="./src/css/output.css">
 
-    <!-- Remixicon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"
-/>
-</head>
-<body
-class="w-full h-screen bg-gray-800 font-spartan">
-    <div
-    class="grid grid-rows-layout w-full h-screen">
-    <main class="grid lg:grid-cols-5">
-        <div 
-            class="flex justify-around items-center lg:flex-col lg:justify-center cor"
-            style="background-color: #FBFBF2;">
-            <div>
-                <i 
-                    class="ri-lock-unlock-fill cursor-pointer"
-                    style="color: #252525; font-size: 35px;"
-                    onclick="bloquearDiv(event)">
-                </i>
-                <i 
-                    class="ri-file-copy-line cursor-pointer" 
-                    style="color: #252525; font-size: 35px;"></i>
-            </div>
-            <span class="texto" style="color:#252525; font-size: 35px; font-weight: 600;">#FBFBF2</span>
-        </div>
-        <div 
-            class="flex justify-around items-center lg:flex-col lg:justify-center cor"
-            style="background-color: #E5E6E4;">
-            <div>
-                <i 
-                    class="ri-lock-unlock-fill cursor-pointer"
-                    style="color: #252525; font-size: 35px;"
-                    onclick="bloquearDiv(event)">
-                </i>
-                <i 
-                    class="ri-file-copy-line cursor-pointer" 
-                    style="color: #252525; font-size: 35px;"></i>
-            </div>
-            <span class="texto" style="color:#252525; font-size: 35px; font-weight: 600;">#E5E6E4</span>
-        </div>
-        <div 
-            class="flex justify-around items-center lg:flex-col lg:justify-center cor"
-            style="background-color: #CFD2CD;">
-            <div>
-                <i 
-                    class="ri-lock-unlock-fill cursor-pointer"
-                    style="color: #252525; font-size: 35px;"
-                    onclick="bloquearDiv(event)">
-                </i>
-                <i 
-                    class="ri-file-copy-line cursor-pointer" 
-                    style="color: #252525; font-size: 35px;"></i>
-            </div>
-            <span class="texto" style="color:#252525; font-size: 35px; font-weight: 600;">#CFD2CD</span>
-        </div>
-        <div 
-            class="flex justify-around items-center lg:flex-col lg:justify-center cor"
-            style="background-color: #A6A2A2;">
-            <div>
-                <i 
-                    class="ri-lock-unlock-fill cursor-pointer"
-                    style="color: #252525; font-size: 35px;"
-                    onclick="bloquearDiv(event)">
-                </i>
-                <i 
-                    class="ri-file-copy-line cursor-pointer" 
-                    style="color: #252525; font-size: 35px;"></i>
-            </div>
-            <span class="texto" style="color:#252525; font-size: 35px; font-weight: 600;">#A6A2A2</span>
-        </div>
-        <div 
-            class="flex justify-around items-center lg:flex-col lg:justify-center cor"
-            style="background-color: #847577;">
-            <div>
-                <i 
-                    class="ri-lock-unlock-fill cursor-pointer"
-                    style="color: #252525; font-size: 35px;"
-                    onclick="bloquearDiv(event)">
-                </i>
-                <i 
-                    class="ri-file-copy-line cursor-pointer" 
-                    style="color: #252525; font-size: 35px;"></i>
-            </div>
-            <span class="texto" style="color:#252525; font-size: 35px; font-weight: 600;">#847577</span>
-        </div>
-    </main>
-    
-    
-        <footer
-        class="bg-branco-neve-0 w-full px-4 py-2">
-            <button
-            class="bg-azul-0 text-white font-bold h-12 rounded-md hover:bg-azul-claro-0"
-            style="width: 200px;"
-            id="gerar">
-                Nova cor
-            </button>
-        </footer>
-    </div>
+        <!-- Remixicon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Toastr alert -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
-    <script src="./src/js/main.js"></script>
-</body>
+        <style>
+        .toast-success {
+            background-color: hsl(220, 100%, 50%);
+        }
+        </style>
+
+    </head>
+    <body class="w-full h-screen bg-gray-800 font-spartan">
+
+        <div id="root">
+            <script type="module" src="./app.js"></script>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="./src/js/main.js"></script>
+    </body>
 </html>
